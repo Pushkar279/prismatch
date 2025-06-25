@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Profile | Prismatch</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="images/logo.png" alt="Prismatch Logo">
+                <h1>Prismatch</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="tournaments.html">Tournaments</a></li>
+                <li><a href="leaderboard.html">Leaderboard</a></li>
+                <li><a href="community.html">Community</a></li>
+                <li><a href="profile.html" class="active">Profile</a></li>
+                <li><a href="#" onclick="logout()" class="btn-login">Logout</a></li>
+            </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="profile-page">
+        <section class="profile-header">
+            <div class="profile-avatar">
+                <img src="images/avatar1.jpg" alt="User Avatar" id="user-avatar">
+                <button class="btn-edit" onclick="editAvatar()">Edit</button>
+            </div>
+            <div class="profile-info">
+                <h1 id="username">Demo User</h1>
+                <p class="profile-rank"><i class="fas fa-trophy"></i> Rank: <span id="user-rank">#124</span></p>
+                <p class="profile-game"><i class="fas fa-gamepad"></i> Main Game: <span id="main-game">BGMI</span></p>
+                <div class="profile-stats">
+                    <div class="stat-card">
+                        <h3>Tournaments</h3>
+                        <p id="tournaments-count">12</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Wins</h3>
+                        <p id="wins-count">5</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Earnings</h3>
+                        <p id="earnings">₹25,000</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="profile-content">
+            <div class="profile-tabs">
+                <button class="tab-btn active" onclick="openTab('upcoming')">Upcoming</button>
+                <button class="tab-btn" onclick="openTab('history')">History</button>
+                <button class="tab-btn" onclick="openTab('settings')">Settings</button>
+            </div>
+
+            <div id="upcoming" class="tab-content active">
+                <h2>Your Upcoming Tournaments</h2>
+                <div class="user-tournaments">
+                    <!-- Tournaments will be loaded here -->
+                </div>
+            </div>
+
+            <div id="history" class="tab-content">
+                <h2>Tournament History</h2>
+                <div class="history-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Tournament</th>
+                                <th>Date</th>
+                                <th>Position</th>
+                                <th>Earnings</th>
+                            </tr>
+                        </thead>
+                        <tbody id="history-data">
+                            <!-- History data will be loaded here -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div id="settings" class="tab-content">
+                <h2>Account Settings</h2>
+                <form id="settings-form">
+                    <div class="form-group">
+                        <label for="edit-username">Username</label>
+                        <input type="text" id="edit-username" name="username">
+                    </div>
+                    <div class="form-group">
+                        <label for="edit-email">Email</label>
+                        <input type="email" id="edit-email" name="email">
+                    </div>
+                    <div class="form-group">
+                        <label for="current-password">Current Password</label>
+                        <input type="password" id="current-password" name="current-password">
+                    </div>
+                    <div class="form-group">
+                        <label for="new-password">New Password</label>
+                        <input type="password" id="new-password" name="new-password">
+                    </div>
+                    <div class="form-group">
+                        <label for="confirm-new-password">Confirm New Password</label>
+                        <input type="password" id="confirm-new-password" name="confirm-new-password">
+                    </div>
+                    <button type="submit" class="btn-primary">Save Changes</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <!-- Same footer as index.html -->
+    </footer>
+
+    <script src="js/auth.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        // Load user data
+        document.addEventListener('DOMContentLoaded', () => {
+            const user = JSON.parse(localStorage.getItem('prismatch_user'));
+            if (user) {
+                document.getElementById('username').textContent = user.username || 'Demo User';
+                document.getElementById('edit-username').value = user.username || '';
+                document.getElementById('edit-email').value = user.email || '';
+            }
+        });
+
+        function openTab(tabId) {
+            // Hide all tab contents
+            document.querySelectorAll('.tab-content').forEach(tab => {
+                tab.classList.remove('active');
+            });
+            
+            // Deactivate all tab buttons
+            document.querySelectorAll('.tab-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            
+            // Activate selected tab
+            document.getElementById(tabId).classList.add('active');
+            event.currentTarget.classList.add('active');
+        }
+
+        function editAvatar() {
+            // In a real app, this would open a file picker
+            alert('Avatar editing functionality would be implemented here');
+        }
+    </script>
+</body>
+</html>

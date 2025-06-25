@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prismatch - Esports Tournament Platform</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Header/Navigation -->
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="images/logo.png" alt="Prismatch Logo">
+                <h1>Prismatch</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="tournaments.html">Tournaments</a></li>
+                <li><a href="leaderboard.html">Leaderboard</a></li>
+                <li><a href="community.html">Community</a></li>
+                <li><a href="register.html" class="btn-register">Register</a></li>
+                <li><a href="login.html" class="btn-login">Login</a></li>
+            </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h2>Boost Your Esports Career</h2>
+                <p>Compete, Win, and Rise Through the Ranks in India's Premier Gaming Platform</p>
+                <div class="hero-buttons">
+                    <a href="register.html" class="btn-primary">Join Now</a>
+                    <a href="tournaments.html" class="btn-secondary">View Tournaments</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="features">
+            <h2>Why Choose Prismatch?</h2>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <img src="images/matchmaking-icon.png" alt="Matchmaking">
+                    <h3>Smart Matchmaking</h3>
+                    <p>Our AI-powered system ensures fair matches based on skill level.</p>
+                </div>
+                <div class="feature-card">
+                    <img src="images/tournament-icon.png" alt="Tournaments">
+                    <h3>Daily Tournaments</h3>
+                    <p>From local to international competitions with real cash prizes.</p>
+                </div>
+                <div class="feature-card">
+                    <img src="images/community-icon.png" alt="Community">
+                    <h3>Pro Guidance</h3>
+                    <p>Learn from professional gamers in our exclusive communities.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Upcoming Tournaments -->
+        <section class="upcoming-tournaments">
+            <h2>Upcoming Tournaments</h2>
+            <div class="tournament-carousel">
+                <!-- Dynamically loaded from tournaments.js -->
+            </div>
+            <a href="tournaments.html" class="btn-view-all">View All Tournaments</a>
+        </section>
+
+        <!-- Testimonials -->
+        <section class="testimonials">
+            <h2>What Players Say</h2>
+            <div class="testimonial-slider">
+                <!-- Testimonials will be loaded here -->
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Prismatch</h3>
+                <p>Empowering gamers to turn their passion into a career.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="tournaments.html">Tournaments</a></li>
+                    <li><a href="leaderboard.html">Leaderboards</a></li>
+                    <li><a href="community.html">Community</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Support</h3>
+                <ul>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Connect With Us</h3>
+                <div class="social-icons">
+                    <a href="#"><img src="images/facebook-icon.png" alt="Facebook"></a>
+                    <a href="#"><img src="images/twitter-icon.png" alt="Twitter"></a>
+                    <a href="#"><img src="images/instagram-icon.png" alt="Instagram"></a>
+                    <a href="#"><img src="images/discord-icon.png" alt="Discord"></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 Prismatch. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/tournaments.js"></script>
+</body>
+</html>

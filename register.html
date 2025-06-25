@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register | Prismatch</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="images/logo.png" alt="Prismatch Logo">
+                <h1>Prismatch</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="tournaments.html">Tournaments</a></li>
+                <li><a href="leaderboard.html">Leaderboard</a></li>
+                <li><a href="community.html">Community</a></li>
+                <li><a href="register.html" class="btn-register active">Register</a></li>
+                <li><a href="login.html" class="btn-login">Login</a></li>
+            </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="auth-page">
+        <section class="auth-container">
+            <div class="auth-form">
+                <h2>Create Your Account</h2>
+                <form id="register-form">
+                    <div class="form-group">
+                        <label for="username">Username</label>
+                        <input type="text" id="username" name="username" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="confirm-password">Confirm Password</label>
+                        <input type="password" id="confirm-password" name="confirm-password" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="game">Primary Game</label>
+                        <select id="game" name="game">
+                            <option value="BGMI">BGMI</option>
+                            <option value="Valorant">Valorant</option>
+                            <option value="Free Fire">Free Fire</option>
+                            <option value="Call of Duty Mobile">Call of Duty Mobile</option>
+                            <option value="Dota 2">Dota 2</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+                    <div class="form-group checkbox">
+                        <input type="checkbox" id="terms" name="terms" required>
+                        <label for="terms">I agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a></label>
+                    </div>
+                    <button type="submit" class="btn-primary">Register</button>
+                </form>
+                <div class="auth-footer">
+                    <p>Already have an account? <a href="login.html">Login here</a></p>
+                </div>
+            </div>
+            <div class="auth-image">
+                <img src="images/hero-bg.jpg" alt="Esports Competition">
+                <div class="auth-image-text">
+                    <h3>Start Your Esports Journey</h3>
+                    <p>Join thousands of players competing and earning on Prismatch</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <!-- Same footer as index.html -->
+    </footer>
+
+    <script src="js/auth.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

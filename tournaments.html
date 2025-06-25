@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tournaments | Prismatch</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="images/logo.png" alt="Prismatch Logo">
+                <h1>Prismatch</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="tournaments.html" class="active">Tournaments</a></li>
+                <li><a href="leaderboard.html">Leaderboard</a></li>
+                <li><a href="community.html">Community</a></li>
+                <li><a href="register.html" class="btn-register">Register</a></li>
+                <li><a href="login.html" class="btn-login">Login</a></li>
+            </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="tournaments-page">
+        <section class="tournaments-header">
+            <h1>Upcoming Tournaments</h1>
+            <div class="filter-options">
+                <div class="game-filter">
+                    <label for="game-select">Filter by Game:</label>
+                    <select id="game-select" onchange="filterTournaments(this.value)">
+                        <option value="all">All Games</option>
+                        <option value="BGMI">BGMI</option>
+                        <option value="Valorant">Valorant</option>
+                        <option value="Free Fire">Free Fire</option>
+                        <option value="Call of Duty Mobile">CODM</option>
+                        <option value="Dota 2">Dota 2</option>
+                    </select>
+                </div>
+                <div class="search-box">
+                    <input type="text" placeholder="Search tournaments...">
+                    <button><i class="fas fa-search"></i></button>
+                </div>
+            </div>
+        </section>
+
+        <section class="tournaments-container">
+            <div id="tournaments-container">
+                <!-- Tournaments will be loaded here -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <!-- Same footer as index.html -->
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/tournaments.js"></script>
+</body>
+</html>
